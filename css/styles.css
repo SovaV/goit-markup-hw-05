@@ -255,8 +255,6 @@ ul {
     ),
     url(../images/hero.jpg);
 }
-.hero .container {
-}
 
 .hero-title {
   margin-left: auto;
@@ -396,6 +394,8 @@ ul {
 
 .work {
   padding-top: 94px;
+
+  position: relative;
 }
 
 .work-title {
@@ -406,6 +406,29 @@ ul {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.lable {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  bottom: 0;
+
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  text-align: center;
+
+
+  background: rgba(47, 48, 58, 0.8);
+}
+.lable .title {
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+    
+  color: var(--white-color);
+
 }
 
 /* ======== НАША КОМАНДА ======== */
@@ -558,7 +581,7 @@ ul {
 .bot-social {
   padding: 0px;
 }
-..bot-social .link {
+.bot-social .link {
   fill: var(--secondary-text-color);
 }
 .join {
