@@ -283,7 +283,6 @@ ul {
   position: absolute;
   z-index: 1000;
   display: inline;
-  align-items: center;
 
   transform: translate(-50%, -50%);
 
