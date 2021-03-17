@@ -181,14 +181,15 @@ ul {
 .site-nav .link {
   padding: 32px 0px;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link::after {
   content: "";
   position: absolute; 
   display: block;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: scaleX(0) 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scaleX(0);
-  bottom: 0;
+  bottom: 0px;
 
   width: 100%;
   height: 4px;
@@ -201,10 +202,8 @@ ul {
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-
 .site-nav .link.current::after {
   transform: scaleX(1);
-
 }
 .site-nav .link.current {
   color: var(--accent-text-color);
@@ -223,6 +222,9 @@ ul {
 
   color: var(--secondary-text-color);
   fill: var(--secondary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-nav .item:not(:last-child) {
@@ -240,7 +242,6 @@ ul {
 .item .link {
   display: flex;
   align-items: center;
-  
 }
 
 .icon-envelope {
@@ -301,22 +302,20 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transform: scale(0.1);
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1);
-}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
 
   flex-direction: row-reverse;
   display: inline-flex;
@@ -327,9 +326,6 @@ ul {
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .btn-close {
@@ -487,12 +483,11 @@ ul {
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:focus .text-product,
 .link:hover .text-product {
-  opacity: 1;
   transform: translateX(0);
 }
 
@@ -584,6 +579,8 @@ ul {
   justify-content: center;
   border-radius: 50%;
   fill: rgba(175, 177, 184, 1);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -632,6 +629,9 @@ ul {
   justify-content: center;
 
   fill: rgba(175, 177, 184, 1);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .parthner:hover,
@@ -675,6 +675,7 @@ ul {
 
 .bot-nav .link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bot-nav .link:hover,
@@ -707,8 +708,10 @@ ul {
   height: 44px;
   justify-content: center;
   border-radius: 50%;
-  fill: white;
+  fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .icons .social-bottom:focus,
