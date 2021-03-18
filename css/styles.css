@@ -580,13 +580,15 @@ ol {
 }
 .icons {
   display: flex;
-  padding: 0px;
   justify-content: space-between;
 }
 .icons .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 44px;
   height: 44px;
-  justify-content: center;
   border-radius: 50%;
   fill: rgba(175, 177, 184, 1);
 
@@ -707,24 +709,28 @@ ol {
 }
 
 .bot-icons {
-  display: block;
-  align-items: center;
-  justify-content: center;
   min-width: 206px;
 }
-
-.icons .social-bottom {
+.bot-icons .list {
+  display: flex;
+  justify-content: space-between;
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bot-icons .icon-link {
   width: 44px;
   height: 44px;
-  justify-content: center;
   border-radius: 50%;
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons .social-bottom:focus,
-.icons .social-bottom:hover {
+.bot-icons .icon-link:focus,
+.bot-icons .icon-link:hover {
   background-color: var(--accent-text-color);
   fill: var(--white-color);
 }
